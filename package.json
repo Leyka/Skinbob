@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/nodemon src/app.js --exec 'npm run lint && node'",
-    "lint": "./node_modules/.bin/eslint **/*.js",
-    "build-css": "node-sass --include-path public/scss public/scss/main.scss public/css/main.css --output-style compressed", 
-    "watch-css": "./node_modules/.bin/nodemon -e scss -x 'npm run build-css'"
+    "start": "./bin/start",
+    "lint": "./bin/lint",
+    "build-css": "./bin/build-css", 
+    "watch-css": "./bin/watch-css"
   },
   "keywords": [],
   "author": "",
