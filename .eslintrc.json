@@ -4,6 +4,7 @@
         "eol-last": "off"
     }, 
     "env": {
+        "mocha": true, 
         "phantomjs": true
     }
 }
