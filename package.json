@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/nodemon src/app.js --exec 'npm run lint && node'",
-    "lint": "./node_modules/.bin/eslint **/*.js"
+    "lint": "./node_modules/.bin/eslint **/*.js",
+    "build-css": "node-sass --include-path public/scss public/scss/main.scss public/css/main.css --output-style compressed", 
+    "watch-css": "./node_modules/.bin/nodemon -e scss -x 'npm run build-css'"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,7 @@
     "morgan": "^1.9.0",
     "nodemon": "^1.12.5",
     "pg": "^7.4.0",
+    "pug": "^2.0.0-rc.4",
     "uuid": "^3.1.0"
   },
   "devDependencies": {
@@ -26,6 +29,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "node-sass": "^4.7.2"
   }
 }
