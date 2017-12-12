@@ -2,5 +2,8 @@
     "extends": "standard",
     "rules": {
         "eol-last": "off"
+    }, 
+    "env": {
+        "phantomjs": true
     }
 }
