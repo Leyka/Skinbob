@@ -1,0 +1,8 @@
+extends layout
+
+block content 
+  #error.has-text-centered.center
+    .error-code=error.status
+    .error-message=error.message
+    a.button.is-warning.is-medium(href="javascript:history.back()") Go back
+    pre #{error.stack}

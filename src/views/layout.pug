@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title Skinbob
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(href='https://fonts.googleapis.com/css?family=VT323', rel='stylesheet')
+    link(rel="stylesheet", href="css/main.css")
+  body 
+    nav.navbar.is-transparent
+      .container
+        .navbar-brand
+          a.navbar-item(href='/') Skinbob
+          .navbar-burger.burger(data-target='navbarExampleTransparentExample')
+            span
+            span
+            span
+        .navbar-menu
+          .navbar-start
+            a.navbar-item(href='/champions') Champions
+            a.navbar-item(href='/skins') Skins
+            a.navbar-item(href='/how') How it works?
+          .navbar-end
+            a.navbar-item(href='/notify') 
+              i.fa.fa-envelope
+              | Notify me
+    section.section
+      block content

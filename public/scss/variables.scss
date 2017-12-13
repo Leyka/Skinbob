@@ -1,1 +1,15 @@
-$blue: rgb(32, 32, 145);
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=VT323|Raleway+Dots');
+@font-face {
+  font-family: neon;
+  src: url('../fonts/neon.ttf');
+}
+$font-family-title: 'VT323', monospace;
+
+/* Size */ 
+$font-size: 20px;
+
+/* Colors */
+$bg-color: #21222f;
+$font-color: #fff;
+

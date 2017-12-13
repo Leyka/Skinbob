@@ -1,6 +1,40 @@
+@import 'node_modules/bulma/bulma';
 @import 'variables';
+@import 'utils';
+@import 'error'; 
 
+html, body {
+  height: 100%;
+}
 body { 
-  background: $blue; 
-  color: #fff;
+  background: $bg-color;
+  color: $font-color;
+  font-size: $font-size;
+}
+
+nav {
+  &.navbar.is-transparent {
+    background: none;
+  }
+
+  .navbar-brand a {
+    font-size: 1.3rem;
+    font-family: neon;
+    color: #FED128 !important;
+  }
+
+  a {
+    font-family: 'VT323'; 
+    color: #8ce3f7 !important;
+    font-size: 1.3rem;
+  }
+
+  a:hover {
+    color: #c6eff8 !important;
+  }
+
+  i {
+    font-size: 1rem !important;
+    margin-right: 5px;
+  }
 }

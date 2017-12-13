@@ -1,0 +1,36 @@
+#error {
+  width: 1200px;
+
+  .error-message {
+    font-family: $font-family-title; 
+    font-size: 2rem;
+    color: #a2a2a2;
+    margin: 20px 0;
+  }
+
+  pre {
+    margin-top: 20px;
+  }
+
+  .error-code {
+    font-family: 'Raleway Dots';
+    color: #426DFB;
+    font-size: 12rem;
+    line-height: 12rem;
+    text-shadow: 0 0 3vw #2356FF;
+    animation: flux 2s linear infinite;
+    -moz-animation: flux 2s linear infinite;
+    -webkit-animation: flux 2s linear infinite;
+    -o-animation: flux 2s linear infinite;
+  }
+  
+  @keyframes flux {
+    0%,
+    100% {
+      color: #28D7FE;
+    }
+    50% {
+      color: #146C80;
+    }
+  }
+}

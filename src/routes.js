@@ -8,5 +8,7 @@ const syncCtrl = require('./controllers/sync')
 router.route('/').get(homeCtrl.getIndex)
 // Sync Controller
 router.route('/sync').get(syncCtrl.getIndex)
+router.route('/sync/everything').get(syncCtrl.getEverything)
+router.route('/sync/sales').get(syncCtrl.getSales)
 
 module.exports = router
