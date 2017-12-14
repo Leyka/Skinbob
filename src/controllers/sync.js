@@ -96,15 +96,23 @@ async function insertSkins (skinsJSON, idChampionDB) {
   }
 }
 
+/**
+ * Return skin data from provided JSON to the object in database
+ *
+ */
 async function getSkinsOnSale (skinsJSON) {
   let skin = {}
   let skinInDB = {}
+  let skins = []
 
   for (const index in skinsJSON) {
     skin = skinsJSON[index]
     skinInDB = await db.findBy('skins', 'name', skin.name)
+    skins.push(skinInDB)
     await updatePrice(skinInDB, skin.price)
   }
+
+  return skins
 }
 
 /**
@@ -117,16 +125,20 @@ async function getChampionsOnSale (championsJSON) {
   let champion = {}
   let championInDB = {}
   let skinInDB = {}
+  let champions = []
 
   for (const index in championsJSON) {
     champion = championsJSON[index]
     championInDB = await db.findBy('champions', 'name', champion.name)
+    champions.push(championInDB)
     skinInDB = await db.find('skins', {
       champion_id: championInDB.id,
       name: 'default'
     })
     await updatePrice(skinInDB, champion.price)
   }
+
+  return champions
 }
 
 async function updatePrice (skinInDB, price) {
