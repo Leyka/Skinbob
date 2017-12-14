@@ -6,8 +6,9 @@ const db = require(path.resolve('db', 'utils'))
 
 module.exports = {
 
-  getIndex: (req, res) => {
-    res.send('Hello from sync')
+  getIndex: async (req, res) => {
+    const champions = await db.all('champions')
+    res.send(champions)
   },
 
   getEverything: (req, res) => {
@@ -60,7 +61,7 @@ async function insertChampionsAndSkins (championsJSON) {
         public_id: champion.id,
         name: champion.name,
         key: champion.key,
-        title: champion.title
+        title: _.startCase(champion.title)
       }
       idChampionDB = await db.findOrCreate('champions', 'public_id', champion.id, fields)
       skinsJSON = champion.skins
