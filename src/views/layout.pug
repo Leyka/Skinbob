@@ -21,8 +21,9 @@ html
             a.navbar-item(href='/skins') Skins
             a.navbar-item(href='/how') How it works?
           .navbar-end
-            a.navbar-item(href='/notify') 
-              i.fa.fa-envelope
-              | Notify me
+            .navbar-item
+                a.button.is-info.is-outlined(href='/notify')
+                  i.fa.fa-envelope
+                  | Notify me
     section.section
       block content

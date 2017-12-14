@@ -5,4 +5,5 @@ block content
     .error-code=error.status
     .error-message=error.message
     a.button.is-warning.is-medium(href="javascript:history.back()") Go back
-    pre #{error.stack}
+    if error.stack
+      pre #{error.stack}
